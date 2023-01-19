@@ -10,6 +10,11 @@ export async function getInPatientList(param:any) {
     return res.data.body
 }
 
+export async function getOutPatientList(param:any) {
+    const res:any = await axiosInstance.post(proxyUrl+'/get_getOutPatientList'+version ,param)
+    return res.data.body
+}
+
 export async function getOpPatientList(param:any) {
     const res:any = await axiosInstance.post(proxyUrl+'/get_getOpPatientList'+version ,param)
     return res.data.body
@@ -25,7 +30,7 @@ export async function getDeptList(param:any) {
     return res.data.body
 }
 
-export async function getWardList(param:any){
+export async function getList(param:any){
     const res:any = await axiosInstance.post(proxyUrl+'/get_getWardList'+version ,param)
     return res.data.body
 }
